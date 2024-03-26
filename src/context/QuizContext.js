@@ -75,9 +75,7 @@ function QuizProvider({ children }) {
   useEffect(function () {
     async function getQuestions() {
       try {
-        const questionsRes = await fetch(
-          `https://the-react-quiz-eight.vercel.app/`
-        );
+        const questionsRes = await fetch(`http://localhost:8000/questions`);
         const questionsData = await questionsRes.json();
         dispatch({ type: "dataReceived", payLoad: questionsData });
         console.log(questionsData);
