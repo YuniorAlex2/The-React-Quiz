@@ -75,7 +75,9 @@ function QuizProvider({ children }) {
   useEffect(function () {
     async function getQuestions() {
       try {
-        const questionsRes = await fetch(`http://localhost:8000/questions`);
+        const questionsRes = await fetch(
+          `https://questions-lsxs.onrender.com/questions`
+        );
         const questionsData = await questionsRes.json();
         dispatch({ type: "dataReceived", payLoad: questionsData });
         console.log(questionsData);
