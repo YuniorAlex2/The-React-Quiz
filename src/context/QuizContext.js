@@ -76,7 +76,7 @@ function QuizProvider({ children }) {
     async function getQuestions() {
       try {
         const questionsRes = await fetch(
-          `https://questions-lsxs.onrender.com/questions`
+          `https://indigo-rich-fragrance.glitch.me/questions`
         );
         const questionsData = await questionsRes.json();
         dispatch({ type: "dataReceived", payLoad: questionsData });
